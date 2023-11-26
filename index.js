@@ -1,10 +1,11 @@
-const express = require('express');
+const express   = require('express');
+const config    = require('./config');
+const app       = express();
+const router    = require('./routes') 
 
-const app = express();
+app.use(express.json())
+router(app);
 
-app.use('/', function(req,res){
-    res.send('esta es la central de chatpi')
-})
-
-app.listen(8080);
-console.log('La aplicacion se escucha en el puerto 8080');
+app.listen(config.port,()=>{
+    console.log(`La aplicación está escuchando en el puerto ${config.port}`);
+});
