@@ -17,7 +17,7 @@ function addNewInfoHierbaMala (name,cellphone,product,flavor,quantity) {
                             <h1>Click en el link</h1>
                             <a href="https://wa.me/${cellphone}">Ir a la conversación</a>
                         `
-            await smtpServer.mailer('ronaldblancobalboa@gmail.com',subject,body)
+            await smtpServer.mailer('lilbox.mrs@gmail.com',subject,body)
         }
         const actualDate = new Date()
         const info = {name,cellphone,product,flavor,quantity,date:actualDate}
